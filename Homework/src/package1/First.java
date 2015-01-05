@@ -1,9 +1,8 @@
-package com;
+package package1;
 
 import java.util.Scanner;
 
-
-    /**
+/**
      * Class which consist of solutions of 88 a),b).
     * @author Volodia
     */

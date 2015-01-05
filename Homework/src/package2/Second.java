@@ -1,4 +1,4 @@
-package com;
+package package2;
 
 /**
  * Class which consist solution of  322 task
