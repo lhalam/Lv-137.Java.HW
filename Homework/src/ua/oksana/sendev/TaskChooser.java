@@ -19,10 +19,10 @@ public class TaskChooser {
 	}
 
 	/**
-	 * Handle task choice.
+	 * Handles task choice.
 	 * 
 	 * @param scanIn
-	 *            Scanner that read data from System.in
+	 *            Scanner that reads data from System.in
 	 */
 	private void chooseTask(Scanner scanIn) {
 		System.out.println(Constants.CHOOSE_TASK_QUESTION);
