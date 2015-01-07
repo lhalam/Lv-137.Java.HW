@@ -1,4 +1,4 @@
-package edu.softserveinc.vlish;
+package com.softserveinc.edu.vlish;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 
  */
 
-public class First {
+public class Task88 {
 	/**
 	 * 
 	 * @param snum

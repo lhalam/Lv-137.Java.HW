@@ -1,4 +1,4 @@
-package edu.softserveinc.vlish;
+package com.softserveinc.edu.vlish;
 
 /**
  * Solution of task 333
@@ -6,7 +6,7 @@ package edu.softserveinc.vlish;
  * @author Володя
  * 
  */
-public class Second {
+public class Task333 {
 	public static void main(String[] args) {
 		int sum = 0;
 		int maximum = 0;
