@@ -39,7 +39,7 @@ public class NumberValidator {
 		try {
 			enteredNumber = Integer.parseInt(dataToCheck);
 		} catch (NumberFormatException nfe) {
-			System.out.println(dataToCheck + " "
+			System.out.println(dataToCheck
 					+ Constants.WRONG_NUMBER_FORMAT_MESSAGE);
 			return false;
 		}
@@ -54,7 +54,7 @@ public class NumberValidator {
 	private boolean isNatural() {
 		boolean isNatural = enteredNumber > 0;
 		if (!isNatural) {
-			System.out.println(enteredNumber + " "
+			System.out.println(enteredNumber
 					+ Constants.NOT_NATURAL_NUMBER_MESSAGE);
 		}
 		return isNatural;
@@ -62,7 +62,7 @@ public class NumberValidator {
 	}
 
 	/**
-	 * Gets the value of entered number.
+	 * Gets value of entered number.
 	 * 
 	 * @return Value of entered number.
 	 */

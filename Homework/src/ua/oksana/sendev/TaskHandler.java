@@ -39,7 +39,7 @@ public abstract class TaskHandler {
 	 * Executes task algorithm.
 	 * 
 	 * @param scanIn
-	 *            Scanner that read data from System.in
+	 *            Scanner that reads data from System.in
 	 */
 	public void runTask(Scanner scanIn) {
 		checker = new NumberValidator();
@@ -56,7 +56,7 @@ public abstract class TaskHandler {
 	 * Displays 'enter number request' in the console;
 	 * 
 	 * @param scanIn
-	 *            Scanner that read data from System.in
+	 *            Scanner that reads data from System.in
 	 */
 	private void askForNumber(Scanner scanIn) {
 		System.out.println(Constants.ENTER_NUMBER_REQUEST);
@@ -64,7 +64,7 @@ public abstract class TaskHandler {
 	}
 
 	/**
-	 * Check incoming data with help of NumberValidator class.
+	 * Checks incoming data with help of NumberValidator class.
 	 * 
 	 * @return true if data is valid
 	 */
@@ -101,7 +101,7 @@ public abstract class TaskHandler {
 	 * Handles inter- and intra- task navigation;
 	 * 
 	 * @param scanIn
-	 *            Scanner that read data from System.in
+	 *            Scanner that reads data from System.in
 	 */
 	private void askForProceed(Scanner scanIn) {
 		System.out.println(Constants.PROCEED_QUESTION);
