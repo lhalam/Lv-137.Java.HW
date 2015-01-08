@@ -17,7 +17,19 @@ import com.softserveinc.tools.TaskHandler;
  *
  */
 public class Task331 extends Task implements Calculator {
+	/**
+	 * Instance of class that handles task execution;
+	 */
 	private TaskHandler handler;
+
+	/**
+	 * Starts task execution;
+	 */
+	@Override
+	public void startTask() {
+		handler = new TaskHandler(this);
+		handler.runTask(DataScanner.getScanner());
+	}
 
 	/**
 	 * Makes calculation for task 331.
@@ -38,21 +50,15 @@ public class Task331 extends Task implements Calculator {
 						count++;
 						result.append(new StringBuilder()
 								.append(Constants.VARIANT).append(count)
-								.append(": x=").append(i).append(" y=")
-								.append(j).append(" z=").append(k).append("\n")
+								.append(Constants.X).append(i)
+								.append(Constants.Y).append(j)
+								.append(Constants.Z).append(k).append("\n")
 								.toString());
 					}
 				}
 			}
 		}
 		return result.toString();
-	}
-
-	@Override
-	public void startTask() {
-		handler = new TaskHandler(this);
-		handler.showTask(Constants.TASK_331);
-		handler.runTask(DataScanner.getScanner());
 	}
 
 }

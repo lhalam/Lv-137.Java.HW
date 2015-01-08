@@ -16,7 +16,19 @@ import com.softserveinc.tools.TaskHandler;
  *
  */
 public class Task108 extends Task implements Calculator {
+	/**
+	 * Instance of class that handles task execution;
+	 */
 	private TaskHandler handler;
+
+	/**
+	 * Starts task execution;
+	 */
+	@Override
+	public void startTask() {
+		handler = new TaskHandler(this);
+		handler.runTask(DataScanner.getScanner());
+	}
 
 	/**
 	 * Makes calculation for task 108.
@@ -32,14 +44,6 @@ public class Task108 extends Task implements Calculator {
 		}
 		String result = String.valueOf(i);
 		return result;
-	}
-
-	@Override
-	public void startTask() {
-		handler = new TaskHandler(this);
-		handler.showTask(Constants.TASK_108);
-		handler.runTask(DataScanner.getScanner());
-
 	}
 
 }

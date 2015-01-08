@@ -27,21 +27,6 @@ public class TaskHandler {
 		this.calc = calc;
 	}
 
-
-
-	/**
-	 * Displays task conditions in the console.
-	 * 
-	 * @param task
-	 *            Task conditions.
-	 */
-	public void showTask(String[] task) {
-		for (String line : task) {
-			System.out.println(line);
-		}
-
-	}
-
 	/**
 	 * Executes task algorithm.
 	 * 
