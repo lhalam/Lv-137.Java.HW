@@ -13,7 +13,7 @@ public class Task108 extends TaskHandler {
 	 * Starts task 108 execution.
 	 * 
 	 * @param scanIn
-	 *            Scanner that read data from System.in
+	 *            Scanner that reads data from System.in
 	 */
 	public Task108(Scanner scanIn) {
 		showTask(Constants.TASK_108);

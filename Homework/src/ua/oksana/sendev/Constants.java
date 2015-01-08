@@ -18,8 +18,8 @@ public class Constants {
 			"Якщо можна, то: ",
 			"а) вказати трійку x,y,z таких натуральних чисел, що n=x^2+y^2+z^2; ",
 			"б) вказати всі трійки x,y,z таких натуральних чисел, що n=x^2+y^2+z^2;" };
-	public static final String WRONG_NUMBER_FORMAT_MESSAGE = "is not a number(NaN)";
-	public static final String NOT_NATURAL_NUMBER_MESSAGE = "is not a natural number.(n>0)";
+	public static final String WRONG_NUMBER_FORMAT_MESSAGE = " is not a number(NaN)";
+	public static final String NOT_NATURAL_NUMBER_MESSAGE = " is not a natural number.(n>0)";
 	public static final String CHOOSE_TASK_QUESTION = "Please, choose task (1-Task108, 2-Task331) : ";
 	public static final String CHOICE_TASK_108 = "1";
 	public static final String CHOICE_TASK_331 = "2";

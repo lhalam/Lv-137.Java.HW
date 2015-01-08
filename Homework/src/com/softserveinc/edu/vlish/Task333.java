@@ -1,17 +1,13 @@
-package package2;
+package com.softserveinc.edu.vlish;
 
 /**
- * Class which consist solution of  322 task
- * @author Volodia
- *
+ * Solution of task 333
+ * 
+ * @author Володя
  */
-public class Second {
+public class Task333 {
 
- /** 
-  * main method
-  * * @param args
-  */
-  public static void main(String[] args) {
+public static void main(String[] args) {
     int sum = 0;
     int maximum = 0;
     int elem = 0;
@@ -27,6 +23,6 @@ public class Second {
         }
       }
     }
-    System.out.println(elem); 
+    System.out.println(elem);
   }
 }

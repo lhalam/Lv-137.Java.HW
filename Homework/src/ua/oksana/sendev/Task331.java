@@ -13,7 +13,7 @@ public class Task331 extends TaskHandler {
 	 * Starts task 331 execution.
 	 * 
 	 * @param scanIn
-	 *            Scanner that read data from System.in
+	 *            Scanner that reads data from System.in
 	 */
 	public Task331(Scanner scanIn) {
 		showTask(Constants.TASK_331);
