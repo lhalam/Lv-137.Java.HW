@@ -2,6 +2,9 @@ package ua.oksana.sendev;
 
 import java.util.Scanner;
 
+import com.softservinc.basic_programming_techniques.nested_loops.Task331;
+import com.softservinc.basic_programming_techniques.simple_loops.Task108;
+
 /**
  * Represents tool for task switching.
  * 

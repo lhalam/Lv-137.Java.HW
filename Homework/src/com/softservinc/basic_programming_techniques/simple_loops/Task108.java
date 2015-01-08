@@ -1,6 +1,9 @@
-package ua.oksana.sendev;
+package com.softservinc.basic_programming_techniques.simple_loops;
 
 import java.util.Scanner;
+
+import ua.oksana.sendev.Constants;
+import ua.oksana.sendev.TaskHandler;
 
 /**
  * Represents Task 108.
