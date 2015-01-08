@@ -2,26 +2,33 @@ package com.softserveinc.tools;
 
 /**
  * Represents constants collection.
- * 
- * @author Oksana Senchuk
  *
+ * @author Oksana Senchuk
  */
 public class Constants {
-	public static final String PROCEED_QUESTION = "Do you want to proceed?(y/n): ";
-	public static final String POSITIVE_ANSWER = "y";
-	public static final String NEGATIVE_ANSWER = "n";
-	public static final String ENTER_NUMBER_REQUEST = "Enter natural number:";
-	public static final String WRONG_ANSWER_MESSAGE = "Please, choose 'y' or 'n'.";
-	public static final String[] TASK_108 = { "ƒ‡ÌÓ Ì‡ÚÛ‡Î¸ÌÂ ˜ËÒÎÓ n. ŒÚËÏ‡ÚË Ì‡ÈÏÂÌ¯Â ˜ËÒÎÓ ‚Ë‰Û 2^r, ·≥Î¸¯Â Á‡ n." };
-	public static final String[] TASK_331 = {
-			"ƒ‡ÌÓ Ì‡ÚÛ‡Î¸ÌÂ ˜ËÒÎÓ n. ◊Ë ÏÓÊÌ‡ ÔÓ‰‡ÚË ÈÓ„Ó ‚ ‚Ë„Îˇ‰≥ ÒÛÏË Í‚‡‰‡Ú≥‚ Ú¸Óı Ì‡ÚÛ‡Î¸ÌËı ˜ËÒÂÎ?",
-			"ﬂÍ˘Ó ÏÓÊÌ‡, ÚÓ: ",
-			"‡) ‚Í‡Á‡ÚË Ú≥ÈÍÛ x,y,z Ú‡ÍËı Ì‡ÚÛ‡Î¸ÌËı ˜ËÒÂÎ, ˘Ó n=x^2+y^2+z^2; ",
-			"·) ‚Í‡Á‡ÚË ‚Ò≥ Ú≥ÈÍË x,y,z Ú‡ÍËı Ì‡ÚÛ‡Î¸ÌËı ˜ËÒÂÎ, ˘Ó n=x^2+y^2+z^2;" };
-	public static final String WRONG_NUMBER_FORMAT_MESSAGE = " is not a number(NaN)";
-	public static final String NOT_NATURAL_NUMBER_MESSAGE = " is not a natural number.(n>0)";
-	public static final String NO_RESULT = " no variants.";
-	public static final String EMPTY_STRING = "";
-	public static final String RESULT_MESSAGE = "The result for natural number ";
-	public static final String VARIANT = "Variant π ";
+    public static final String PROCEED_QUESTION = "Do you want to proceed?(y/n): ";
+    public static final String POSITIVE_ANSWER = "y";
+    public static final String NEGATIVE_ANSWER = "n";
+    public static final String ENTER_NUMBER_REQUEST = "Enter natural number:";
+    public static final String WRONG_ANSWER_MESSAGE = "Please, choose 'y' or 'n'.";
+    public static final String[] TASK_108 = {"ÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ n. ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩ 2^r, ÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩ n."};
+    public static final String[] TASK_331 = {
+            "ÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ n. ÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩ ÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ?",
+            "ÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ, ÔøΩÔøΩ: ",
+            "ÔøΩ) ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ x,y,z ÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ, ÔøΩÔøΩ n=x^2+y^2+z^2; ",
+            "ÔøΩ) ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ x,y,z ÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩ, ÔøΩÔøΩ n=x^2+y^2+z^2;"};
+    public static final String WRONG_NUMBER_FORMAT_MESSAGE = " is not a number(NaN)";
+    public static final String NOT_NATURAL_NUMBER_MESSAGE = " is not a natural number.(n>0)";
+    public static final String NO_RESULT = " no variants.";
+    public static final String EMPTY_STRING = "";
+    public static final String RESULT_MESSAGE = "The result for natural number ";
+    public static final String VARIANT = "Variant ÔøΩ ";
+    public static final String TASK_107 = " –ó–∞–¥–∞–Ω–µ —Ü—ñ–ª–µ —á–∏—Å–ª–æ m>1.\n" +
+            " –û–±—á–∏—Å–ª–∏—Ç–∏ –Ω–∞–π–±—ñ–ª—å—à–µ —Ü—ñ–ª–µ —á–∏—Å–ª–æ k –ø—Ä–∏ —è–∫–æ–º—É –≤–∏–∫–æ–Ω—É—î—Ç—å—Å—è —É–º–æ–≤–∞ 4^k<m";
+    public static final String TASK_243_A = " –ó–∞–¥–∞–Ω–µ –Ω–∞—Ç—É—Ä–∞–ª—å–Ω–µ —á–∏—Å–ª–æ n.\n –í–∏–∑–Ω–∞—á–∏—Ç–∏," +
+            "—á–∏ –º–æ–∂–ª–∏–≤–æ –ø—Ä–µ–¥—Å—Ç–∞–≤–∏—Ç–∏ –¥–∞–Ω–µ —á–∏—Å–ª–æ —É –≤–∏–≥–ª—è–¥—ñ —Å—É–º–∏ –¥–≤–æ—Ö –∫–≤–∞–¥—Ä–∞—Ç—ñ–≤ –Ω–∞—Ç—É—Ä–∞–ª—å–Ω–∏—Ö —á–∏—Å–µ–ª?\n" +
+            " –Ø–∫—â–æ –º–æ–ª–∏–≤–æ , —Ç–æ:\n  –í–∫–∞–∑–∞—Ç–∏ –ø–∞—Ä—É x, y —Ç–∞–∫–∏—Ö –Ω–∞—Ç—É—Ä–∞–ª—å–Ω–∏—Ö —á–∏—Å–µ–ª, —â–æ x^2+y^2=n\n";
+    public static final String TASK_243_B = " –ó–∞–¥–∞–Ω–µ –Ω–∞—Ç—É—Ä–∞–ª—å–Ω–µ —á–∏—Å–ª–æ n.\n –í–∏–∑–Ω–∞—á–∏—Ç–∏," +
+            "—á–∏ –º–æ–∂–ª–∏–≤–æ –ø—Ä–µ–¥—Å—Ç–∞–≤–∏—Ç–∏ –¥–∞–Ω–µ —á–∏—Å–ª–æ —É –≤–∏–≥–ª—è–¥—ñ —Å—É–º–∏ –¥–≤–æ—Ö –∫–≤–∞–¥—Ä–∞—Ç—ñ–≤ –Ω–∞—Ç—É—Ä–∞–ª—å–Ω–∏—Ö —á–∏—Å–µ–ª?\n" +
+            " –Ø–∫—â–æ –º–æ–ª–∏–≤–æ , —Ç–æ:\n  –í–∫–∞–∑–∞—Ç–∏ —É—Å—ñ –ø–∞—Ä–∏ x, y —Ç–∞–∫–∏—Ö –Ω–∞—Ç—É—Ä–∞–ª—å–Ω–∏—Ö —á–∏—Å–µ–ª, —â–æ x^2+y^2=n —Ç–∞ x>=y\n";
 }
