@@ -3,6 +3,8 @@ package com.softservinc.basic_programming_techniques.simple_loops;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import com.softserveinc.homework.Starter;
+import com.softserveinc.homework.Task;
 
 /**
  * Class used to add "1" to the begin and to the end of the number.
