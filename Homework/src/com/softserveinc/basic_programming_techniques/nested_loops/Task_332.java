@@ -5,6 +5,8 @@ import static java.lang.Math.sqrt;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import com.softserveinc.homework.Starter;
+import com.softserveinc.homework.Task;
 
 /**
  * Class used for finding four variables that can represent a natural number as

@@ -3,6 +3,8 @@ package com.softservinc.basic_programming_techniques.simple_loops;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import com.softserveinc.homework.Starter;
+import com.softserveinc.homework.Task;
 
 /**
  * Class used to swap the first and the last digits of the number.
