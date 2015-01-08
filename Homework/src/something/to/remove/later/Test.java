@@ -1,7 +1,7 @@
 package something.to.remove.later;
-import com.softservinc.basic_programming_techniques.nested_loops.Task331;
-import com.softservinc.basic_programming_techniques.simple_loops.Task108;
-import com.softservinc.homework.Task;
+import com.softserveinc.basic_programming_techniques.nested_loops.Task331;
+import com.softserveinc.basic_programming_techniques.simple_loops.Task108;
+import com.softserveinc.homework.Task;
 
 public class Test {
 

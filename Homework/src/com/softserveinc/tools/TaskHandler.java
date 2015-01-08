@@ -1,4 +1,4 @@
-package com.softservinc.tools;
+package com.softserveinc.tools;
 
 import java.util.Scanner;
 

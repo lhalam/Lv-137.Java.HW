@@ -1,4 +1,4 @@
-package com.softservinc.homework;
+package com.softserveinc.homework;
 
 public interface Starter {
 	void startTask();

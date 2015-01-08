@@ -1,4 +1,4 @@
-package com.softservinc.tools;
+package com.softserveinc.tools;
 
 public interface Calculator {
 	String makeCalculation(int naturalNumber);

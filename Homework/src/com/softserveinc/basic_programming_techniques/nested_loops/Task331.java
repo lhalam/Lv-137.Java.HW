@@ -1,14 +1,14 @@
-package com.softservinc.basic_programming_techniques.nested_loops;
+package com.softserveinc.basic_programming_techniques.nested_loops;
 
 import java.util.Scanner;
 
-import com.softservinc.basic_programming_techniques.simple_loops.Task108;
-import com.softservinc.homework.Starter;
-import com.softservinc.homework.Task;
-import com.softservinc.tools.Calculator;
-import com.softservinc.tools.Constants;
-import com.softservinc.tools.DataScanner;
-import com.softservinc.tools.TaskHandler;
+import com.softserveinc.basic_programming_techniques.simple_loops.Task108;
+import com.softserveinc.homework.Starter;
+import com.softserveinc.homework.Task;
+import com.softserveinc.tools.Calculator;
+import com.softserveinc.tools.Constants;
+import com.softserveinc.tools.DataScanner;
+import com.softserveinc.tools.TaskHandler;
 
 /**
  * Represents Task 331.
