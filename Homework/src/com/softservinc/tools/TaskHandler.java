@@ -1,4 +1,4 @@
-package ua.oksana.sendev;
+package com.softservinc.tools;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Oksana Senchuk
  *
  */
-public abstract class TaskHandler {
+public class TaskHandler {
 	/**
 	 * Data received from console
 	 */
@@ -21,6 +21,11 @@ public abstract class TaskHandler {
 	 * Instance of data validator class;
 	 */
 	private NumberValidator checker;
+	private Calculator calc;
+
+	public TaskHandler(Calculator calc) {
+		this.calc = calc;
+	}
 
 	/**
 	 * Displays task conditions in the console.
@@ -46,7 +51,7 @@ public abstract class TaskHandler {
 		askForNumber(scanIn);
 		if (isValid()) {
 			enteredNumber = checker.getEnteredNumber();
-			String result = makeCalculation(enteredNumber);
+			String result = calc.makeCalculation(enteredNumber);
 			showResult(enteredNumber, result);
 		}
 		askForProceed(scanIn);
@@ -71,15 +76,6 @@ public abstract class TaskHandler {
 	private boolean isValid() {
 		return checker.checkIfNumberIsValid(requestResult);
 	}
-
-	/**
-	 * Abstraction for future calculation.
-	 * 
-	 * @param naturalNumber
-	 *            Valid natural number.
-	 * @return
-	 */
-	protected abstract String makeCalculation(int naturalNumber);
 
 	/**
 	 * Displays solution of the problem for given natural number.
@@ -109,18 +105,11 @@ public abstract class TaskHandler {
 		if (answer.equals(Constants.POSITIVE_ANSWER)) {
 			runTask(scanIn);
 		} else if (answer.equals(Constants.NEGATIVE_ANSWER)) {
-			backToChooser();
+
 		} else {
 			System.out.println(Constants.WRONG_ANSWER_MESSAGE);
 			askForProceed(scanIn);
 		}
-	}
-
-	/**
-	 * Returns to chooser class.
-	 */
-	private void backToChooser() {
-		new TaskChooser();
 	}
 
 }

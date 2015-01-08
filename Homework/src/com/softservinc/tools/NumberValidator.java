@@ -1,4 +1,5 @@
-package ua.oksana.sendev;
+package com.softservinc.tools;
+
 
 /**
  * Represents tool for validation of incoming data.

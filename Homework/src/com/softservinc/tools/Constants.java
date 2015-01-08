@@ -1,4 +1,4 @@
-package ua.oksana.sendev;
+package com.softservinc.tools;
 
 /**
  * Represents constants collection.
@@ -20,10 +20,6 @@ public class Constants {
 			"б) вказати всі трійки x,y,z таких натуральних чисел, що n=x^2+y^2+z^2;" };
 	public static final String WRONG_NUMBER_FORMAT_MESSAGE = " is not a number(NaN)";
 	public static final String NOT_NATURAL_NUMBER_MESSAGE = " is not a natural number.(n>0)";
-	public static final String CHOOSE_TASK_QUESTION = "Please, choose task (1-Task108, 2-Task331) : ";
-	public static final String CHOICE_TASK_108 = "1";
-	public static final String CHOICE_TASK_331 = "2";
-	public static final String WRONG_TASK_CHOICE = "No such task number. (1 or 2)";
 	public static final String NO_RESULT = " no variants.";
 	public static final String EMPTY_STRING = "";
 	public static final String RESULT_MESSAGE = "The result for natural number ";
