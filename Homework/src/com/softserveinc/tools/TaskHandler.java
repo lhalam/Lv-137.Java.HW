@@ -27,6 +27,8 @@ public class TaskHandler {
 		this.calc = calc;
 	}
 
+
+
 	/**
 	 * Displays task conditions in the console.
 	 * 
