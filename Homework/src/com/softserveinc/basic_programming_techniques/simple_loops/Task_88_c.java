@@ -1,4 +1,4 @@
-package com.softservinc.basic_programming_techniques.simple_loops;
+package com.softserveinc.basic_programming_techniques.simple_loops;
 
 import java.io.BufferedReader;
 import java.io.IOException;
