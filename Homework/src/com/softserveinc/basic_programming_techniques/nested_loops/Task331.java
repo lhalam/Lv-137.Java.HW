@@ -14,17 +14,11 @@ import com.softserveinc.tools.TaskHandler;
  */
 public class Task331 extends Task implements Calculator {
 	/**
-	 * Instance of class that handles task execution;
-	 */
-	private TaskHandler handler;
-
-	/**
 	 * Starts task execution;
 	 */
 	@Override
 	public void startTask() {
-		handler = new TaskHandler(this);
-		handler.runTask(DataScanner.getScanner());
+		new TaskHandler(this).runTask(DataScanner.getScanner());
 	}
 
 	/**
@@ -34,7 +28,7 @@ public class Task331 extends Task implements Calculator {
 	 *            Valid value of incoming data.
 	 */
 	@Override
-	public String makeCalculation(int naturalNumber) {
+	public String calculate(int naturalNumber) {
 		int count = 0;
 		StringBuilder result = new StringBuilder();
 		for (int i = 1; i <= naturalNumber; i++) {

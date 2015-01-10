@@ -10,58 +10,50 @@ import java.util.Scanner;
  */
 public class TaskHandler {
 	/**
-	 * Data received from console
+	 * Instance of calculator.
 	 */
-	private String requestResult;
-	/**
-	 * Data received from console after validation
-	 */
-	private int enteredNumber;
-	/**
-	 * Instance of data validator class;
-	 */
-	private NumberValidator checker;
 	private Calculator calc;
 
+	/**
+	 * Creates a tool that handles task execution.
+	 * 
+	 * @param calc
+	 *            Instance of calculator.
+	 */
 	public TaskHandler(Calculator calc) {
 		this.calc = calc;
+
 	}
 
 	/**
-	 * Executes task algorithm.
+	 * Runs task execution algorithm.
 	 * 
 	 * @param scanIn
 	 *            Scanner that reads data from System.in
 	 */
 	public void runTask(Scanner scanIn) {
-		checker = new NumberValidator();
-		askForNumber(scanIn);
-		if (isValid()) {
-			enteredNumber = checker.getEnteredNumber();
-			String result = calc.makeCalculation(enteredNumber);
+		NumberValidator checker = new NumberValidator();
+		String dataToCheck = askForNumber(scanIn);
+		boolean isValid = checker.isValid(dataToCheck);
+		if (isValid) {
+			int enteredNumber = checker.getEnteredNumber();
+			String result = calc.calculate(enteredNumber);
 			showResult(enteredNumber, result);
 		}
 		askForProceed(scanIn);
 	}
 
 	/**
-	 * Displays 'enter number request' in the console;
+	 * Displays 'enter number' request.
 	 * 
 	 * @param scanIn
 	 *            Scanner that reads data from System.in
+	 * @return entered data as String object.
 	 */
-	private void askForNumber(Scanner scanIn) {
+	private String askForNumber(Scanner scanIn) {
 		System.out.println(Constants.ENTER_NUMBER_REQUEST);
-		requestResult = scanIn.nextLine();
-	}
-
-	/**
-	 * Checks incoming data with help of NumberValidator class.
-	 * 
-	 * @return true if data is valid
-	 */
-	private boolean isValid() {
-		return checker.checkIfNumberIsValid(requestResult);
+		String requestResult = scanIn.nextLine();
+		return requestResult;
 	}
 
 	/**
@@ -77,11 +69,12 @@ public class TaskHandler {
 			result = Constants.NO_RESULT;
 		}
 		System.out.println(new StringBuilder().append(Constants.RESULT_MESSAGE)
-				.append(naturalNumber).append(" : ").append(result).toString());
+				.append(naturalNumber).append(Constants.DIVIDER).append(result)
+				.toString());
 	}
 
 	/**
-	 * Handles inter- and intra- task navigation;
+	 * Handles ;
 	 * 
 	 * @param scanIn
 	 *            Scanner that reads data from System.in

@@ -1,10 +1,7 @@
 package com.softserveinc.basic_programming_techniques.simple_loops;
 
-import java.util.Scanner;
-
 import com.softserveinc.homework.Task;
 import com.softserveinc.tools.Calculator;
-import com.softserveinc.tools.Constants;
 import com.softserveinc.tools.DataScanner;
 import com.softserveinc.tools.TaskHandler;
 
@@ -16,17 +13,11 @@ import com.softserveinc.tools.TaskHandler;
  */
 public class Task108 extends Task implements Calculator {
 	/**
-	 * Instance of class that handles task execution;
-	 */
-	private TaskHandler handler;
-
-	/**
 	 * Starts task execution;
 	 */
 	@Override
 	public void startTask() {
-		handler = new TaskHandler(this);
-		handler.runTask(DataScanner.getScanner());
+		new TaskHandler(this).runTask(DataScanner.getScanner());
 	}
 
 	/**
@@ -36,7 +27,7 @@ public class Task108 extends Task implements Calculator {
 	 *            Valid value of incoming data.
 	 */
 	@Override
-	public String makeCalculation(int naturalNumber) {
+	public String calculate(int naturalNumber) {
 		int i = 1;
 		while (i <= naturalNumber) {
 			i *= 2;

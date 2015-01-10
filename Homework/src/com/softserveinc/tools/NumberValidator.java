@@ -22,7 +22,7 @@ public class NumberValidator {
 	 *            Data received from console.
 	 * @return true if entered value is valid.
 	 */
-	public boolean checkIfNumberIsValid(String dataToCheck) {
+	public boolean isValid(String dataToCheck) {
 		boolean isValid = false;
 		if (isNumeric(dataToCheck)) {
 			isValid = isNatural();

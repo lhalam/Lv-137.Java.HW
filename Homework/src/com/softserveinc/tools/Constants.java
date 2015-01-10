@@ -20,6 +20,7 @@ public class Constants {
 	public static final String EMPTY_STRING = "";
 	public static final String RESULT_MESSAGE = "The result for natural number ";
 	public static final String VARIANT = "Variant #";
+	public static final String DIVIDER = " : ";
 	public static final String TASK_107 = " Задане ціле число m>1.\n"
 			+ " Обчислити найбільше ціле число k при якому виконується умова 4^k<m";
 	public static final String TASK_243_A = " Задане натуральне число n.\n Визначити,"
