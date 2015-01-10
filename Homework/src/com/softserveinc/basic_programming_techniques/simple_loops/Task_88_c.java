@@ -3,7 +3,6 @@ package com.softserveinc.basic_programming_techniques.simple_loops;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import com.softserveinc.homework.Starter;
 import com.softserveinc.homework.Task;
 
 /**
@@ -12,7 +11,7 @@ import com.softserveinc.homework.Task;
  * @author Kucheryavenko Dmytro
  * 
  */
-public class Task_88_c extends Task implements Starter {
+public class Task_88_c extends Task{
 	/**
 	 * Method swaps the first and the last digits of the number, by means of
 	 * turning int variable to String, swapping first and last symbols and

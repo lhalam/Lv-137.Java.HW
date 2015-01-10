@@ -3,7 +3,6 @@ package com.softserveinc.basic_programming_techniques.simple_loops;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import com.softserveinc.homework.Starter;
 import com.softserveinc.homework.Task;
 
 /**
@@ -11,7 +10,7 @@ import com.softserveinc.homework.Task;
  * 
  * @author Kucheryavenko Dmytro
  */
-public class Task_88_d extends Task implements Starter {
+public class Task_88_d extends Task{
 	/**
 	 * Method turns int variable to String, adds "1" to the first and last
 	 * position and turns it back to int type.

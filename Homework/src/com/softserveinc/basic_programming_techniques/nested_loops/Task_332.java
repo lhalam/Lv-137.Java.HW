@@ -5,7 +5,6 @@ import static java.lang.Math.sqrt;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import com.softserveinc.homework.Starter;
 import com.softserveinc.homework.Task;
 
 /**
@@ -15,7 +14,7 @@ import com.softserveinc.homework.Task;
  * @author Kucheryavenko Dmytro
  * 
  */
-public class Task_332 extends Task implements Starter {
+public class Task_332 extends Task{
 	/**
 	 * {@value homework.Task_332#var}
 	 */

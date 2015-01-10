@@ -1,6 +1,6 @@
 package com.softserveinc.basic_programming_techniques.nested_loops;
 
-import com.softservinc.homework.Task;
+import com.softserveinc.homework.Task;
 
 /**
  * task 322

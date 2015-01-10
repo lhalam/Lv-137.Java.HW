@@ -1,9 +1,5 @@
 package com.softserveinc.basic_programming_techniques.nested_loops;
 
-import java.util.Scanner;
-
-import com.softserveinc.basic_programming_techniques.simple_loops.Task108;
-import com.softserveinc.homework.Starter;
 import com.softserveinc.homework.Task;
 import com.softserveinc.tools.Calculator;
 import com.softserveinc.tools.Constants;
