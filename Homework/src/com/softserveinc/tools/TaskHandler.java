@@ -1,102 +1,66 @@
 package com.softserveinc.tools;
 
-import java.util.Scanner;
 
 /**
- * Represents algorithm of task execution.
+ * Represents a tool that handles task execution algorithm.
  * 
  * @author Oksana Senchuk
  *
  */
 public class TaskHandler {
+	private final String ENTER_NUMBER_REQUEST = "Please, enter natural number or '%s' for exit";
+	private final String QUIT_WORD = "q";
+	private final int SMALLEST_NATURAL_NUMBER = 0;
+	private final String WRONG_NUMBER_FORMAT_MESSAGE = "'%s' is not a number(NaN)";
+	private final String NOT_NATURAL_NUMBER_MESSAGE = "%d is not a natural number.(n>=0)";
 	/**
-	 * Data received from console
+	 * Instance of executor.
 	 */
-	private String requestResult;
-	/**
-	 * Data received from console after validation
-	 */
-	private int enteredNumber;
-	/**
-	 * Instance of data validator class;
-	 */
-	private NumberValidator checker;
-	private Calculator calc;
+	private Executor exec;
+	private Stream stream;
 
-	public TaskHandler(Calculator calc) {
-		this.calc = calc;
+	/**
+	 * Creates a tool that handles task execution.
+	 * 
+	 * @param calc
+	 *            Instance of calculator.
+	 */
+	public TaskHandler(Executor exec, Stream stream) {
+		this.exec = exec;
+		this.stream = stream;
 	}
 
 	/**
-	 * Executes task algorithm.
+	 * Runs task execution algorithm.
 	 * 
 	 * @param scanIn
 	 *            Scanner that reads data from System.in
 	 */
-	public void runTask(Scanner scanIn) {
-		checker = new NumberValidator();
-		askForNumber(scanIn);
-		if (isValid()) {
-			enteredNumber = checker.getEnteredNumber();
-			String result = calc.makeCalculation(enteredNumber);
-			showResult(enteredNumber, result);
+	public void runTask() {
+		stream.writeLine(String.format(ENTER_NUMBER_REQUEST, QUIT_WORD));
+		String inputData = stream.readLine();
+		int number;
+		if (inputData.equals(QUIT_WORD)) {
+			stream.close();
+			return;
 		}
-		askForProceed(scanIn);
-	}
-
-	/**
-	 * Displays 'enter number request' in the console;
-	 * 
-	 * @param scanIn
-	 *            Scanner that reads data from System.in
-	 */
-	private void askForNumber(Scanner scanIn) {
-		System.out.println(Constants.ENTER_NUMBER_REQUEST);
-		requestResult = scanIn.nextLine();
-	}
-
-	/**
-	 * Checks incoming data with help of NumberValidator class.
-	 * 
-	 * @return true if data is valid
-	 */
-	private boolean isValid() {
-		return checker.checkIfNumberIsValid(requestResult);
-	}
-
-	/**
-	 * Displays solution of the problem for given natural number.
-	 * 
-	 * @param naturalNumber
-	 *            Valid natural number.
-	 * @param result
-	 *            Solution of the problem.
-	 */
-	private void showResult(int naturalNumber, String result) {
-		if (result.equals(Constants.EMPTY_STRING)) {
-			result = Constants.NO_RESULT;
+		try {
+			number = Integer.parseInt(inputData);
+		} catch (NumberFormatException ex) {
+			stream.writeLine(String.format(WRONG_NUMBER_FORMAT_MESSAGE,
+					inputData));
+			runTask();
+			return;
 		}
-		System.out.println(new StringBuilder().append(Constants.RESULT_MESSAGE)
-				.append(naturalNumber).append(" : ").append(result).toString());
-	}
 
-	/**
-	 * Handles inter- and intra- task navigation;
-	 * 
-	 * @param scanIn
-	 *            Scanner that reads data from System.in
-	 */
-	private void askForProceed(Scanner scanIn) {
-		System.out.println(Constants.PROCEED_QUESTION);
-		String answer = scanIn.nextLine();
-		if (answer.equals(Constants.POSITIVE_ANSWER)) {
-			runTask(scanIn);
-		} else if (answer.equals(Constants.NEGATIVE_ANSWER)) {
-
-		} else {
-			System.out.println(Constants.WRONG_ANSWER_MESSAGE);
-			askForProceed(scanIn);
+		if (number < SMALLEST_NATURAL_NUMBER) {
+			stream.writeLine(String.format(NOT_NATURAL_NUMBER_MESSAGE, number));
+			runTask();
+			return;
 		}
+
+		exec.execute(number);
+		runTask();
 	}
 
 }

@@ -14,6 +14,7 @@ public class NumberValidator {
     private int enteredNumber;
     private Scanner scanner = DataScanner.getScanner();
 
+<<<<<<< HEAD
     /**
      * Checks if entered value is valid for the task. Value must be numeric and
      * natural number.
@@ -98,4 +99,25 @@ public class NumberValidator {
         DataScanner.closeScanner();
         return enteredNumber;
     }
+=======
+	public int checkIfEnteredValueIsValid() {
+		System.out.println(Constants.ENTER_NUMBER_REQUEST);
+		outer: while (scanner.hasNext()) {
+			if (scanner.hasNextInt()) {
+				enteredNumber = scanner.nextInt();
+				if (enteredNumber > 1 && enteredNumber < Integer.MAX_VALUE) {
+					break outer;
+				} else
+					System.out.println(Constants.NOT_NATURAL_NUMBER_MESSAGE);
+				continue outer;
+			} else if (scanner.hasNextLine()) {
+				String incorrectValue = scanner.nextLine();
+				System.out.printf(Constants.WRONG_NUMBER_FORMAT_MESSAGE);
+				continue outer;
+			}
+		}
+		DataScanner.closeScanner();
+		return enteredNumber;
+	}
+>>>>>>> edition
 }
