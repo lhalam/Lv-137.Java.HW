@@ -8,19 +8,38 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Task 243_B from homework book
+ *
  * @author Volodymyr Yakymiv
+ * @version 1.1
  */
 public class Task_243_b extends Task {
-    private Map<Integer, Integer> map = new HashMap<>();
+
+    /**
+     * Collection which contains  pairs of results
+     */
+    private Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+
     private StringBuilder stringBuilder = new StringBuilder();
+
+    /**
+     * Create object of {@link com.softserveinc.tools.NumberValidator} class
+     * which include  method  which  will check accuracy of entered number
+     */
     private NumberValidator checker = new NumberValidator();
 
+    /**
+     * Starts task execution;
+     */
     public void startTask() {
         System.out.println(Constants.TASK_243_B);
         solveTask();
         System.out.println(toString());
     }
 
+    /**
+     * Solves task 243_B
+     */
     private void solveTask() {
         int enteredNumber = checker.checkIfEnteredValueIsValid();
         for (int i = 0; i <= Math.sqrt(enteredNumber); i++) {
@@ -33,6 +52,9 @@ public class Task_243_b extends Task {
         }
     }
 
+    /**
+     * Returns the String representation of result.
+     */
     @Override
     public String toString() {
         if (map.isEmpty() == true) {

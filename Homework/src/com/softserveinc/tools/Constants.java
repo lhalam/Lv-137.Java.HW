@@ -31,4 +31,5 @@ public class Constants {
         public static final boolean INITIAL_VALUE_BOOLEAN = false;
 	public static final int INITIAL_VALUE_INT = 0;
 	public static final long INITIAL_VALUE_LONG = 0L;
+    public static final int PART_OF_EQUOTION = 4;
 }
