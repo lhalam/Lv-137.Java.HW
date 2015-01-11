@@ -6,7 +6,7 @@ import com.softserveinc.homework.Task;
 public class Test {
 
 	public static void main(String[] args) {
-		Task task1 = new Task331();
+		Task task1 = new Task108();
 		task1.startTask();
 		
 		

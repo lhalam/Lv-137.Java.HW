@@ -31,7 +31,7 @@ public class Console implements Stream {
 	}
 
 	/**
-	 * Closes scanner object.
+	 * Closes scanner.
 	 */
 	@Override
 	public void close() {

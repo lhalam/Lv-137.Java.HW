@@ -1,6 +1,5 @@
 package com.softserveinc.tools;
 
-
 /**
  * Represents a tool that handles task execution algorithm.
  * 
@@ -8,15 +7,33 @@ package com.softserveinc.tools;
  *
  */
 public class TaskHandler {
+	/**
+	 * 'Enter number request' message.
+	 */
 	private final String ENTER_NUMBER_REQUEST = "Please, enter natural number or '%s' for exit";
+	/**
+	 * 
+	 */
 	private final String QUIT_WORD = "q";
+	/**
+	 * Smallest value of natural number (according to Legendre);
+	 */
 	private final int SMALLEST_NATURAL_NUMBER = 0;
+	/**
+	 * Input error (NaN) message.
+	 */
 	private final String WRONG_NUMBER_FORMAT_MESSAGE = "'%s' is not a number(NaN)";
+	/**
+	 * Input error (not a natural number) message.
+	 */
 	private final String NOT_NATURAL_NUMBER_MESSAGE = "%d is not a natural number.(n>=0)";
 	/**
 	 * Instance of executor.
 	 */
 	private Executor exec;
+	/**
+	 * Instance of stream that read/write data from/into console.
+	 */
 	private Stream stream;
 
 	/**
@@ -52,13 +69,11 @@ public class TaskHandler {
 			runTask();
 			return;
 		}
-
 		if (number < SMALLEST_NATURAL_NUMBER) {
 			stream.writeLine(String.format(NOT_NATURAL_NUMBER_MESSAGE, number));
 			runTask();
 			return;
 		}
-
 		exec.execute(number);
 		runTask();
 	}
