@@ -29,7 +29,7 @@ public class Constants {
 	public static final String TASK_243_B = " Задане натуральне число n.\n Визначити,"
 			+ "чи можливо представити дане число у вигляді суми двох квадратів натуральних чисел?\n"
 			+ " Якщо моливо , то:\n  Вказати усі пари x, y таких натуральних чисел, що x^2+y^2=n та x>=y\n";
-        public static final boolean INITIAL_VALUE_BOOLEAN = false;
+	public static final boolean INITIAL_VALUE_BOOLEAN = false;
 	public static final int INITIAL_VALUE_INT = 0;
 	public static final long INITIAL_VALUE_LONG = 0L;
 }

@@ -8,6 +8,8 @@ public class Test {
 	public static void main(String[] args) {
 		Task task1 = new Task331();
 		task1.startTask();
+		
+		
 	}
 
 }
