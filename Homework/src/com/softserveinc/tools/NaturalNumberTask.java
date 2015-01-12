@@ -1,14 +1,16 @@
-package com.softserveinc.edu.olko123;
+package com.softserveinc.tools;
 
 import java.util.Scanner;
 
+import com.softserveinc.homework.Task;
+
 /**
- * Represent common behaviour for all tasks
+ * Represent common behaviour for tasks
  * 
  * @author Oleg Pavlish
  *
  */
-public abstract class Task {
+public abstract class NaturalNumberTask extends Task {
 	/**
 	 * Represent validity of input parameters
 	 */
@@ -44,6 +46,4 @@ public abstract class Task {
 		}
 		return false;
 	}
-
-	public abstract void solve();
 }

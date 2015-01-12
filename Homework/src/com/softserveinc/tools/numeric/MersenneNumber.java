@@ -1,4 +1,4 @@
-package com.softserveinc.edu.olko123;
+package com.softserveinc.tools.numeric;
 
 import java.util.ArrayList;
 import java.util.List;

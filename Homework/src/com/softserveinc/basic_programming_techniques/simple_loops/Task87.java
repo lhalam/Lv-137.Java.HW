@@ -1,6 +1,8 @@
-package com.softserveinc.edu.olko123;
+package com.softserveinc.basic_programming_techniques.simple_loops;
 
 import java.util.Scanner;
+
+import com.softserveinc.tools.NaturalNumberTask;
 
 /**
  * Task 87 from homework book
@@ -8,7 +10,7 @@ import java.util.Scanner;
  * @author Oleg Pavlish
  *
  */
-public class Task87 extends Task {
+public class Task87 extends NaturalNumberTask {
 	/**
 	 * Natural number whose last digits will be summed
 	 */
@@ -57,7 +59,8 @@ public class Task87 extends Task {
 	 * <p>
 	 * Get sum of last m digits of natural number n
 	 */
-	public void solve() {
+	@Override
+	public void startTask() {
 		if (!isValid) {
 			return;
 		}
@@ -71,10 +74,5 @@ public class Task87 extends Task {
 		}
 
 		System.out.println(result);
-	}
-
-	public static void main(String[] args) {
-		Task87 task87 = new Task87();
-		task87.solve();
 	}
 }

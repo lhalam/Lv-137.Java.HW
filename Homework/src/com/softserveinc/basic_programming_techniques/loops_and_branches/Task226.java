@@ -1,24 +1,30 @@
-package com.softserveinc.edu.olko123;
+package com.softserveinc.basic_programming_techniques.loops_and_branches;
 
-import java.util.List;
 import java.util.Scanner;
 
+import com.softserveinc.tools.NaturalNumberTask;
+
 /**
- * Task 559 from homework book
+ * Task 226 from homework book
  * 
  * @author Oleg Pavlish
  *
  */
-public class Task559 extends Task {
+public class Task226 extends NaturalNumberTask {
 	/**
 	 * Natural number parameter for task
 	 */
 	private int n;
 
 	/**
+	 * Natural number parameter for task
+	 */
+	private int m;
+
+	/**
 	 * Initialize and validate input parameters from stdin
 	 */
-	public Task559() {
+	public Task226() {
 		readInput();
 	}
 
@@ -29,6 +35,8 @@ public class Task559 extends Task {
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter natural number n: ");
 			this.n = readNatural(scanner);
+			System.out.println("Enter natural number m: ");
+			this.m = readNatural(scanner);
 			isValid = true;
 		} catch (NumberFormatException e) {
 			System.out.println("Incorrect number format");
@@ -36,24 +44,20 @@ public class Task559 extends Task {
 	}
 
 	/**
-	 * Solves Task 559:
+	 * Solves Task 226:
 	 * <p>
-	 * Find all Mersenne numbers less than given natural number
+	 * Get all common multiples of natural numbers n,m, that are less than n*m.
 	 */
-	public void solve() {
+	@Override
+	public void startTask() {
 		if (!isValid) {
 			return;
 		}
 
-		List<Integer> result = MersenneNumber.getMersenneRange(n);
-
-		for (int item : result) {
-			System.out.println(item);
+		for (int i = 1; i <= n; i++) {
+			if (i * m % n == 0) {
+				System.out.println(i * m);
+			}
 		}
-	}
-
-	public static void main(String[] args) {
-		Task559 task559 = new Task559();
-		task559.solve();
 	}
 }
