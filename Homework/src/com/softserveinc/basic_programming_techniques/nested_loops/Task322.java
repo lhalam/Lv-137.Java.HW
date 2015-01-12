@@ -69,6 +69,9 @@ public class Task322 extends Task {
 		return element;
 	}
 
+	/**
+	 * Solution of Task 322
+	 */
 	public static void solveTask() {
 		int k;
 		k = getElement();
