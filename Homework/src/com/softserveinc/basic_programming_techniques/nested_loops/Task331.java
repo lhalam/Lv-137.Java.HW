@@ -47,7 +47,7 @@ public class Task331 extends Task implements Executor {
 	 */
 	@Override
 	public void execute(int number) {
-		boolean noResults = verifyForDecomposition(number);
+		boolean noResults = verifyForNotDecomposition(number);
 		if (noResults) {
 			stream.writeLine(String.format(NO_VARIANTS_MESSAGE, number));
 			return;
@@ -91,7 +91,7 @@ public class Task331 extends Task implements Executor {
 	 *            Any natural number.
 	 * @return true if number can't be decomposed.
 	 */
-	private boolean verifyForDecomposition(int number) {
+	private boolean verifyForNotDecomposition(int number) {
 		int maxA = (int) Math.floor(Math.log(number / 7) / Math.log(4));
 		int maxB = (int) Math.floor((number - 7) / 8);
 		for (int a = 0; a <= maxA; a++) {

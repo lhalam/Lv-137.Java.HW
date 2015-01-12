@@ -13,7 +13,7 @@ import com.softserveinc.basic_programming_techniques.nested_loops.Task331;
 public class Task331Test {
 	private static Method[] methods;
 	private static Method calculateMethod;
-	private static Method verifyForDecompositionMethod;
+	private static Method verifyForNotDecompositionMethod;
 	private static Task331 task;
 
 	@BeforeClass
@@ -26,9 +26,9 @@ public class Task331Test {
 				calculateMethod = m;
 				calculateMethod.setAccessible(true);
 				break;
-			case "verifyForDecomposition":
-				verifyForDecompositionMethod = m;
-				verifyForDecompositionMethod.setAccessible(true);
+			case "verifyForNotDecomposition":
+				verifyForNotDecompositionMethod = m;
+				verifyForNotDecompositionMethod.setAccessible(true);
 				break;
 			default:
 				break;
@@ -39,9 +39,9 @@ public class Task331Test {
 	}
 
 	@Test
-	public void testVerifyForDecompositionShouldReturnTrue() {
+	public void testVerifyForNotDecompositionShouldReturnTrue() {
 		try {
-			boolean result = (boolean) verifyForDecompositionMethod.invoke(
+			boolean result = (boolean) verifyForNotDecompositionMethod.invoke(
 					task, 15);
 			assertTrue(result);
 		} catch (IllegalAccessException | IllegalArgumentException
@@ -51,9 +51,9 @@ public class Task331Test {
 	}
 
 	@Test
-	public void testVerifyForDecompositionShouldReturnFalse() {
+	public void testVerifyForNotDecompositionShouldReturnFalse() {
 		try {
-			boolean result = (boolean) verifyForDecompositionMethod.invoke(
+			boolean result = (boolean) verifyForNotDecompositionMethod.invoke(
 					task, 12);
 			assertFalse(result);
 		} catch (IllegalAccessException | IllegalArgumentException
