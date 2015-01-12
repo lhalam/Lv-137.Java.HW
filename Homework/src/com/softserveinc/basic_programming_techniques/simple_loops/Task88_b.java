@@ -43,11 +43,11 @@ public class Task88_b extends Task {
 	 *            The number entered and converted in String
 	 * @return reverse (snum).
 	 */
-	public static StringBuilder reverseNumber(String snum) {
+	public static String reverseNumber(String snum) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(snum);
 		sb.reverse();
-		return sb;
+		return sb.toString();
 	}
 	/**
 	 * Solution of Task 88 b)
@@ -59,8 +59,9 @@ public class Task88_b extends Task {
 			number = getNumber(sc);
 			String snumber = String.valueOf(number);
 			StringBuilder sb = new StringBuilder();
-			sb = reverseNumber(snumber);
-			System.out.println(sb);
+			String resnum = sb.toString();
+			resnum = reverseNumber(snumber);
+			System.out.println(resnum);
 		} catch (NumberFormatException e) {
 			System.out.println("Not Natural number!!!Enter Natural(>0)");
 		}
@@ -71,4 +72,5 @@ public class Task88_b extends Task {
 	public void startTask() {
 		solveTask();
 	}
+	
 }

@@ -5,7 +5,7 @@ import com.softserveinc.homework.Task;
 /**
  * task 322
  * 
- * @author Володя
+ * @author Volodymur Lishchynskiy
  */
 public class Task322 extends Task {
 
@@ -16,29 +16,70 @@ public class Task322 extends Task {
 	}
 
 	/**
-	 * max sum of Dividers for number for 1 to LIM
+	 * 
+	 * @param n1
+	 *            First number
+	 * @param n2
+	 *            Second number
+	 * @return max of First and Second numbers
 	 */
-	public static void maxDiv() {
+	public static int max(int n1, int n2) {
+		int max = 0;
+		if (n1 > n2) {
+			max = n1;
+		} else {
+			max = n2;
+		}
+		return max;
+	}
+
+	/**
+	 * 
+	 * @param num
+	 *            Number entered by keyboard
+	 * @return sum all dividers of Number(num)
+	 */
+	public static int sumOfDividers(int num) {
 		int sum = 0;
-		int maximum = 0;
-		int elem = 0;
-		for (int i = 1; i < LIM; i++) {
-			for (int a = 1; a < i; a++) {
-				if (i % a == 0) {
-					sum = sum + a;
-					if (maximum < sum) {
-						maximum = sum;
-						elem = i;
-						sum = 0;
-					}
-				}
+		for (int i = 1; i <= num; i++) {
+			if (num % i == 0) {
+				sum = sum + i;
 			}
 		}
-		System.out.println(elem);
+		return sum;
+	}
+
+	/**
+	 * 
+	 * @return element from array which have max sum of dividers!
+	 */
+	public static int getElement() {
+		int[] array = new int[LIM + 1];
+		int maximum = 0;
+		int element = 0;
+		for (int i = 1; i <= LIM; i++) {
+			array[i] = i;
+			if (maximum < max(sumOfDividers(array[i]),
+					sumOfDividers(array[i - 1]))) {
+				maximum = max(sumOfDividers(array[i]),
+						sumOfDividers(array[i - 1]));
+				element = i;
+			}
+		}
+		return element;
+	}
+
+	/**
+	 * Solution of Task 322
+	 */
+	public static void solveTask() {
+		int k;
+		k = getElement();
+		System.out.println(k);
 	}
 
 	@Override
 	public void startTask() {
-		maxDiv();
+		solveTask();
 	}
 }
