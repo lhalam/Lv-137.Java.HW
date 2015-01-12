@@ -72,8 +72,5 @@ public class Task88_b extends Task {
 	public void startTask() {
 		solveTask();
 	}
-	public static void main(String[] args) {
-		Task88_b t = new Task88_b();
-		t.startTask();
-	}
+	
 }
