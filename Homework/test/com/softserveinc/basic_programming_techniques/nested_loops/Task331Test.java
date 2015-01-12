@@ -1,4 +1,4 @@
-package com.softserveinc.homework;
+package com.softserveinc.basic_programming_techniques.nested_loops;
 
 import static org.junit.Assert.*;
 

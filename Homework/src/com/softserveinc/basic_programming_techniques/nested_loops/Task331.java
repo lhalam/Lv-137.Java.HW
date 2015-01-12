@@ -65,8 +65,8 @@ public class Task331 extends Task implements Executor {
 	 */
 	private void calculate(int number) {
 		int count = 0;
-		int max = (int) Math.floor(Math.sqrt(number) - 2
-				* Math.pow(SMALLEST_NATURAL_NUMBER, 2));
+		int max = (int) Math.floor(Math.sqrt(number - 2
+				* Math.pow(SMALLEST_NATURAL_NUMBER, 2)));
 		for (int i = SMALLEST_NATURAL_NUMBER; i <= max; i++) {
 			for (int j = i; j <= max; j++) {
 				for (int k = j; k <= max; k++) {
@@ -83,8 +83,8 @@ public class Task331 extends Task implements Executor {
 	}
 
 	/**
-	 * Verifies if number can be decomposed on sum of three squares of integers.
-	 * Uses Legendre's three-square theorem condition : number of type
+	 * Verifies if number can't be decomposed on sum of three squares of
+	 * integers. Uses Legendre's three-square theorem condition : number of type
 	 * n=4^a(8*b+7) can't be decomposed on sum of three squares of integers.
 	 * 
 	 * @param number

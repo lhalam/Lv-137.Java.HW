@@ -1,3 +1,4 @@
+package com.softserveinc.basic_programming_techniques.loops_and_branches;
 
 import com.softserveinc.basic_programming_techniques.loops_and_branches.Task_243_b;
 import org.junit.Assert;
