@@ -51,7 +51,7 @@ public class Task108 extends Task implements Executor {
 	 *            Any natural number of integer type.
 	 * @return result of the calculation.
 	 */
-	private int calculate(int naturalNumber) {
+	public int calculate(int naturalNumber) {
 		int temp = 1;
 		while (temp <= naturalNumber) {
 			temp *= 2;

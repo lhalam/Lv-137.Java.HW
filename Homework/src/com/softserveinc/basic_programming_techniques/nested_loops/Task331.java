@@ -47,13 +47,13 @@ public class Task331 extends Task implements Executor {
 	 */
 	@Override
 	public void execute(int number) {
-		boolean noResults = verifyForNotDecomposition(number);
-		if (noResults) {
+		boolean isValid = verifyForDecomposition(number);
+		if (!isValid) {
 			stream.writeLine(String.format(NO_VARIANTS_MESSAGE, number));
 			return;
 		}
 		stream.writeLine(String.format(RESULT_MESSAGE, number));
-		calculate(number);
+		decomposeNumber(number);
 
 	}
 
@@ -63,7 +63,7 @@ public class Task331 extends Task implements Executor {
 	 * @param number
 	 *            Any natural number.
 	 */
-	private void calculate(int number) {
+	public void decomposeNumber(int number) {
 		int count = 0;
 		int max = (int) Math.floor(Math.sqrt(number - 2
 				* Math.pow(SMALLEST_NATURAL_NUMBER, 2)));
@@ -83,26 +83,26 @@ public class Task331 extends Task implements Executor {
 	}
 
 	/**
-	 * Verifies if number can't be decomposed on sum of three squares of
+	 * Verifies if number can be decomposed on sum of three squares of
 	 * integers. Uses Legendre's three-square theorem condition : number of type
 	 * n=4^a(8*b+7) can't be decomposed on sum of three squares of integers.
 	 * 
 	 * @param number
 	 *            Any natural number.
-	 * @return true if number can't be decomposed.
+	 * @return true if number can be decomposed.
 	 */
-	private boolean verifyForNotDecomposition(int number) {
+	public boolean verifyForDecomposition(int number) {
 		int maxA = (int) Math.floor(Math.log(number / 7) / Math.log(4));
 		int maxB = (int) Math.floor((number - 7) / 8);
 		for (int a = 0; a <= maxA; a++) {
 			for (int b = 0; b <= maxB; b++) {
 				int undecomposedNum = (int) Math.pow(4, a) * (8 * b + 7);
 				if (undecomposedNum == number) {
-					return true;
+					return false;
 				}
 			}
 		}
-		return false;
+		return true;
 	}
 
 	/**
