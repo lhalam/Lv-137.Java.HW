@@ -2,8 +2,6 @@ package com.softserveinc.basic_programming_techniques.simple_loops;
 
 import static org.junit.Assert.*;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
