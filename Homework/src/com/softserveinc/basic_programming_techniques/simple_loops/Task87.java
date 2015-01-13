@@ -2,7 +2,9 @@ package com.softserveinc.basic_programming_techniques.simple_loops;
 
 import java.util.Scanner;
 
-import com.softserveinc.tools.NaturalNumberTask;
+import com.softserveinc.homework.Task;
+import com.softserveinc.tools.Constants;
+import com.softserveinc.tools.Input;
 
 /**
  * Task 87 from homework book
@@ -10,7 +12,7 @@ import com.softserveinc.tools.NaturalNumberTask;
  * @author Oleg Pavlish
  *
  */
-public class Task87 extends NaturalNumberTask {
+public class Task87 extends Task {
 	/**
 	 * Natural number whose last digits will be summed
 	 */
@@ -20,6 +22,8 @@ public class Task87 extends NaturalNumberTask {
 	 * Natural number representing digits count
 	 */
 	private long m;
+	
+	private boolean isValid;
 
 	/**
 	 * Initialize and validate input parameters from stdin
@@ -32,14 +36,13 @@ public class Task87 extends NaturalNumberTask {
 	 * Initialize and validate parameters from stdin
 	 */
 	private void readInput() {
-		try (Scanner scanner = new Scanner(System.in)) {
+		try(Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter natural number n: ");
-			this.n = readNatural(scanner);
+			this.n = Input.readNatural(scanner);
 			System.out.println("Enter natural number m: ");
-			this.m = readNatural(scanner);
-			isValid = true;
+			this.m = Input.readNatural(scanner);
+			this.isValid = true;
 		} catch (NumberFormatException e) {
-			System.out.println("Incorrect number format");
 		}
 	}
 
@@ -61,7 +64,8 @@ public class Task87 extends NaturalNumberTask {
 	 */
 	@Override
 	public void startTask() {
-		if (!isValid) {
+		if(!isValid){
+			System.out.print(Constants.NOT_NATURAL_NUMBER_MESSAGE);
 			return;
 		}
 
@@ -73,6 +77,6 @@ public class Task87 extends NaturalNumberTask {
 			n = n / 10;
 		}
 
-		System.out.println(result);
+		System.out.print(result);
 	}
 }

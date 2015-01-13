@@ -3,7 +3,9 @@ package com.softserveinc.task_by_topics.integers;
 import java.util.List;
 import java.util.Scanner;
 
-import com.softserveinc.tools.NaturalNumberTask;
+import com.softserveinc.homework.Task;
+import com.softserveinc.tools.Constants;
+import com.softserveinc.tools.Input;
 import com.softserveinc.tools.numeric.MersenneNumber;
 
 /**
@@ -12,11 +14,13 @@ import com.softserveinc.tools.numeric.MersenneNumber;
  * @author Oleg Pavlish
  *
  */
-public class Task559 extends NaturalNumberTask {
+public class Task559 extends Task {
 	/**
 	 * Natural number parameter for task
 	 */
 	private int n;
+	
+	private boolean isValid;
 
 	/**
 	 * Initialize and validate input parameters from stdin
@@ -31,10 +35,9 @@ public class Task559 extends NaturalNumberTask {
 	private void readInput() {
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter natural number n: ");
-			this.n = readNatural(scanner);
+			this.n = Input.readNatural(scanner);
 			isValid = true;
 		} catch (NumberFormatException e) {
-			System.out.println("Incorrect number format");
 		}
 	}
 
@@ -46,13 +49,12 @@ public class Task559 extends NaturalNumberTask {
 	@Override
 	public void startTask() {
 		if (!isValid) {
+			System.out.print(Constants.NOT_NATURAL_NUMBER_MESSAGE);
 			return;
 		}
 
 		List<Integer> result = MersenneNumber.getMersenneRange(n);
 
-		for (int item : result) {
-			System.out.println(item);
-		}
+		System.out.print(result.toString());
 	}
 }
