@@ -1,0 +1,4 @@
+SELECT DISTINCT City
+FROM Employees
+
+
