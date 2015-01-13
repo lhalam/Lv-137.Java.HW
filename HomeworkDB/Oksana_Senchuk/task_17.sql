@@ -1,0 +1,1 @@
+update employees set city='New Jersey' WHERE notes='oksana senchuk' and city='San Francisco' limit 1;

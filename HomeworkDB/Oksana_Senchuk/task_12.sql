@@ -1,0 +1,1 @@
+select FirstName,LastName,BirthDate from employees group by FirstName,LastName,BirthDate having month(birthDate)=month(curdate());

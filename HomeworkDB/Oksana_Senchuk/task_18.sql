@@ -1,0 +1,1 @@
+update employees set HireDate=curdate() WHERE notes='oksana senchuk' limit 5;

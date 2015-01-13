@@ -1,0 +1,1 @@
+select firstName,LastName,count(ord) from(select FirstName,lastName,OrderID as ord,year(o.OrderDate)as ordYear from employees as e join orders as o on e.EmployeeID=o.EmployeeID group by FirstName,lastName,OrderID having ordYear=1997)as name_orders_table group by FirstName,LastName;

@@ -1,0 +1,1 @@
+select min(age),max(age),avg(age) from(select floor(((datediff(curdate(),birthdate))/365.242))as age from employees where city='London')as age_table;

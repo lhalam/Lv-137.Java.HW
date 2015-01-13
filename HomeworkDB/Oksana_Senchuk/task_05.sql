@@ -1,0 +1,1 @@
+select count(*) as londoners from employees where city='London'; 

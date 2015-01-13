@@ -1,0 +1,1 @@
+select city,avg(age) from(select floor(((datediff(curdate(),birthdate))/365.242))as age,city from employees)as age_city_table group by city having avg(age)>60;

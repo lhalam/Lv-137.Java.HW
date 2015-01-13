@@ -1,0 +1,1 @@
+delete from employees where notes='oksana senchuk' limit 1;
