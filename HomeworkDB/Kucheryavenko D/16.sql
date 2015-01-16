@@ -1,0 +1,1 @@
+SELECT*FROM employees WHERE EmployeeID>9;

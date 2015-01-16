@@ -1,0 +1,1 @@
+SELECT COUNT(*)as 'London citizens' FROM employees WHERE city="London" GROUP by city;

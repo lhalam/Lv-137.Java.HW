@@ -1,0 +1,1 @@
+SELECT firstname,lastname FROM employees WHERE MONTH(birthdate) = MOD(MONTH(NOW()), 12) + 1;
